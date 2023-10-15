@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SignUp from './pages/SignUp/SignUp';
 import ForgetPassword from './pages/ForgetPassword/ForgetPassword';
 import Email_sent from './pages/ForgetPassword/Email_sent';
