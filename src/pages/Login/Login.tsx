@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '../../components/Button/Button';
 import '../SignUp/SignUp.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // interface FormLogin {
 //   email: string;
 //   password: string;
@@ -14,7 +14,7 @@ export default function Login() {
   // const [password, setPassword] = useState('');
   // const [formData, setFormData] = useState('');
   const [typePassword, setTypePassword] = useState('password');
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   // const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   //   event.preventDefault();
   //   setPassword(event.target.value);
@@ -41,7 +41,7 @@ export default function Login() {
       password: yup.string().required('Your password is required'),
     }),
     onSubmit: (_values) => {
-      navigate('/Dashboard')
+      navigate('/Dashboard');
     },
   });
 
@@ -117,9 +117,9 @@ export default function Login() {
       <div className="container min-w-full center pt-10 relative flex flex-col justify-center items-center">
         <blockquote className="body-text-medium blockquote-form text-gray-500">
           Don’t have an account?
-          <a href="/SignUp">
+          <Link to="/SignUp">
             <span className="relative font-semibold text-primary-500"> Create An Account</span>
-          </a>
+          </Link>
         </blockquote>
       </div>
     </div>

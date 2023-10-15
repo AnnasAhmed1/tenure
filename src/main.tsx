@@ -11,7 +11,8 @@ import Step3 from './pages/OnBoarding/Step3';
 import Step4_dc from './pages/OnBoarding/Step4_dc';
 import Login from './pages/Login/Login';
 import Layout from './components/Layout/Layout';
-
+import './App.css';
+import './index.css';
 const router = createBrowserRouter([
   { path: '/', element: <Login /> },
   { path: '/*', element: <Layout /> },
