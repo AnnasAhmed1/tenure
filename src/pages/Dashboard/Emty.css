@@ -1,0 +1,73 @@
+ #css:hover{
+    color: rgb(56 133 123 /1);
+    background-color: white;
+}
+.active{
+    background-color:  rgb(56 133 123 /1);
+    color: white;
+}
+/* .wholePage{
+    display: grid;
+    grid-template-areas: 'sidebar rightSide';
+    grid-template-columns: 1.4fr 8fr;
+}
+.leftSide{
+    grid-area: sidebar;
+  }
+.rightSide{
+    grid-area: rightSide;
+} */
+
+@font-face {
+    font-family: "CeraPro";
+    src: url("/public/fonts/cera-pro/Cera-Pro-Regular.otf") format("opentype")
+    
+}
+@font-face {
+    font-family: "CeraProBold";
+    src: url("/public/fonts/cera-pro/Cera-Pro-Bold.otf") format("opentype")
+    
+}
+body{
+    font-family: 'CeraPro' !important;
+    color: #25384d;
+}
+h1, h2, h3, h4, h5, h6, th, #prDiv a {
+    font-family: 'CeraProBold' !important;
+}
+.react-datepicker-popper {
+    background-color: #fff !important;
+    background: #fff !important;
+    opacity: 1 !important   ;
+    position: static !important;
+    transform: unset    !important;
+}
+.recharts-surface{
+width: 100% !important;
+max-height: 270px !important;
+
+transform: scale(1.05);
+}
+
+.recharts-wrapper{
+    width: 100% !important;
+}
+.recharts-tooltip-wrapper{
+    margin-top: -130px !important;
+    z-index: 999 !important;
+}
+
+.MuiInputBase-root {
+    border-radius: 8px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0;
+}
