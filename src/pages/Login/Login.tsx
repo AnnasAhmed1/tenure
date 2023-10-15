@@ -100,9 +100,9 @@ export default function Login() {
               </div>
             ) : null}
           </div>
-          <a href="/ForgetPassword" className="mb-2 pr-6 float-right">
+          <Link to="/ForgetPassword" className="mb-2 pr-6 float-right">
             <span className="relative font-semibold text-primary-500"> Forgot Password?</span>
-          </a>
+          </Link>
           <div className="px-5">
             <Button
               type="submit"

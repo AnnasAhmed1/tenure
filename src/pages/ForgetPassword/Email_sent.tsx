@@ -28,7 +28,7 @@ function Email_sent() {
           Didn’t receive a link?{' '}
           <span className="text-md font-semibold align-bottom cursor-pointer" style={{ color: 'rgb(56 133 123 /1)' }}>
             {' '}
-            <a href="/"> Resend Link </a>
+            <Link to="/"> Resend Link </Link>
           </span>
         </p>
       </div>
@@ -36,7 +36,7 @@ function Email_sent() {
         <div className="w-1/2">
           <div className="">
             <Button type="submit" className="button-primary-lg  button mb-2" style={{ borderRadius: '10px' }}>
-              <a href="/ResetPassword">Set New Password ?</a>
+              <Link to="/ResetPassword">Set New Password ?</Link>
             </Button>
           </div>
         </div>

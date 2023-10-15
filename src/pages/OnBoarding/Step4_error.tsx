@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 
 function Step4_error() {
@@ -50,14 +51,14 @@ function Step4_error() {
         <div className="w-1/2">
           <div className="flex justify-between">
             <span className="text-lg font-semibold align-bottom cursor-pointer" style={{ color: 'rgb(56 133 123 /1)' }}>
-              <a href="/OnBoarding1">
+              <Link to="/OnBoarding1">
                 <img
                   src="assets/icons/chevron_left.svg"
                   alt=""
                   style={{ maxWidth: 'fit-conteny', display: 'inline', transform: 'translateY(-3px)' }}
                 />{' '}
                 Previous
-              </a>
+              </Link>
             </span>
             <span
               className="text-lg font-semibold cursor-pointer"

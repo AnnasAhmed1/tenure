@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function EmployeesEm() {
   return (
     <div className="flex h-min-screen">
@@ -12,7 +14,7 @@ export default function EmployeesEm() {
             </p>
             <li className="list-none p-2 rounded-lg active flex w-1/4 text-start mx-auto mt-4">
               <img src="assets/icons/add_2.svg" alt="" className="me-1" />
-              <a href="">Add Employees</a>
+              <Link to="">Add Employees</Link>
             </li>
           </div>
         </div>

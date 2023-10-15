@@ -2,6 +2,7 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 export default function EnterEmail() {
   const formik = useFormik({
@@ -14,7 +15,6 @@ export default function EnterEmail() {
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-
     },
   });
   return (
@@ -53,9 +53,9 @@ export default function EnterEmail() {
       <div className="container min-w-full center relative flex flex-col justify-center items-center">
         <blockquote className="pt-4 body-text-medium blockquote-form text-gray-500">
           Back to
-          <a href="/Login">
+          <Link to="/Login">
             <span className="relative font-semibold text-primary-500"> Login</span>
-          </a>
+          </Link>
         </blockquote>
       </div>
     </div>

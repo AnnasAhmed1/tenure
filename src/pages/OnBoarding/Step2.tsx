@@ -5,6 +5,7 @@ import * as yup from 'yup';
 
 import { Step4_sucess } from './Step4_sucess';
 import CSVUploader from '../../components/CSVUploader/CSVUploader';
+import { Link } from 'react-router-dom';
 const initialValues = {
   employees: [{ name: '', email: '', birthday: '', location: '' }],
 };
@@ -192,14 +193,14 @@ function Step2() {
                 className="text-lg font-semibold align-bottom cursor-pointer"
                 style={{ color: 'rgb(56 133 123 /1)' }}
               >
-                <a href="/OnBoarding1">
+                <Link to="/OnBoarding1">
                   <img
                     src="assets/icons/chevron_left.svg"
                     alt=""
                     style={{ maxWidth: 'fit-content', display: 'inline', transform: 'translateY(-4px)' }}
                   />
                   &#9; Previous
-                </a>
+                </Link>
               </span>
               <span
                 className="text-lg font-semibold cursor-pointer"

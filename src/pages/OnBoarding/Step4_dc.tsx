@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import Step4 from './Step4';
 import { useState } from 'react';
@@ -37,14 +38,14 @@ function Step4_dc() {
                   className="text-lg font-semibold align-bottom cursor-pointer"
                   style={{ color: 'rgb(56 133 123 /1)' }}
                 >
-                  <a href="/OnBoarding3">
+                  <Link to="/OnBoarding3">
                     <img
                       src="assets/icons/chevron_left.svg"
                       alt=""
                       style={{ maxWidth: 'fit-conteny', display: 'inline', transform: 'translateY(-4px)' }}
                     />
                     &#9; Previous
-                  </a>
+                  </Link>
                 </span>
                 <span
                   className="text-lg font-semibold cursor-pointer"

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ConfirmResetPassword() {
 
   return (
@@ -9,9 +11,9 @@ export default function ConfirmResetPassword() {
         Password has been changed
         </p>
         <div className="flex flex-col center pt-8 min-w-full desktop:px-96 phone:px-5">
-            <a href="/" className="button-primary-lg center">
+            <Link to="/" className="button-primary-lg center">
               Login
-            </a>
+            </Link>
         </div>
       </div>
     </div>

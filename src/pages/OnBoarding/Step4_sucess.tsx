@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 interface ComponentProps {
   title: string;
   btnText: string;
@@ -73,14 +73,14 @@ export const Step4_sucess: React.FC<ComponentProps> = ({ title, btnText, show, p
             className={`text-lg font-semibold align-bottom cursor-pointer ${show == false ? 'text-left' : ''}`}
             style={{ color: 'rgb(56 133 123 /1)' }}
           >
-            <a href={`${previousLink}`}>
+            <Link to={`${previousLink}`}>
               <img
                 src="assets/icons/chevron_left.svg"
                 alt=""
                 style={{ maxWidth: 'fit-conteny', display: 'inline', transform: 'translateY(-4px)' }}
               />
               &#9; Previous
-            </a>
+            </Link>
           </span>
           {show == true && (
             <span

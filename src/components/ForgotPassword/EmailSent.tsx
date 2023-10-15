@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function EmailSent() {
 
   return (
@@ -13,9 +15,9 @@ export default function EmailSent() {
       <div className="container min-w-full center relative flex flex-col justify-center items-center">
         <blockquote className="pt-4 body-text-medium blockquote-form text-gray-500">
             Didn’t receive a link?  
-          <a href="/">
+          <Link to="/">
             <span className="relative font-semibold text-primary-500"> Resend Link</span>
-          </a>
+          </Link>
         </blockquote>
       </div>
     </div>

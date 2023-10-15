@@ -1,7 +1,7 @@
 import Button from '../../components/Button/Button';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 function Step3() {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -90,14 +90,14 @@ function Step3() {
           </div>
           <div className="flex justify-between mt-4">
             <span className="text-lg font-semibold align-bottom cursor-pointer" style={{ color: 'rgb(56 133 123 /1)' }}>
-              <a href="/OnBoarding2">
+              <Link to="/OnBoarding2">
                 <img
                   src="assets/icons/chevron_left.svg"
                   alt=""
                   style={{ maxWidth: 'fit-content', display: 'inline', transform: 'translateY(-4px)' }}
                 />
                 &#9; Previous
-              </a>
+              </Link>
             </span>
             <span
               className="text-lg font-semibold cursor-pointer"
