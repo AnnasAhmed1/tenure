@@ -101,7 +101,7 @@ function Step4() {
               <div className="flex gap-4">
                 {/* <div > */}
                 <div className="w-1/2">
-                  <label>
+                  <label className='relative'>
                     <input
                       type="date"
                       name="ExpDate"
