@@ -90,7 +90,7 @@ function Step2() {
                                       className="text-red-500"
                                     />
                                   </label>
-                                  <label className="block mb-5 text-left">
+                                  <label className="block mb-5 text-left relative">
                                     <Field
                                       key={`${index}-birthday`}
                                       id={`employees.${index}.birthday`}
