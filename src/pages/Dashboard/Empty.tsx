@@ -1,6 +1,3 @@
-
-
-
 import { useState } from 'react';
 import './Emty.css';
 import Box from '../../components/Box/Box';
@@ -10,8 +7,7 @@ import { ChartHoverBox } from '../../components/Charthoverbox/ChartHoverBox';
 import EmTableHeads from '../../components/Em/EmTableHeads';
 import EmTableRows from '../../components/Em/EmTableRows';
 import { WelcomeJon, ActiveOffers } from '../../en.json';
-import { format, addWeeks, addDays, addMonths} from 'date-fns';
-
+import { format, addWeeks, addDays, addMonths } from 'date-fns';
 
 const dataMonthly = [
   {
@@ -134,20 +130,14 @@ const dataDaily = [
   },
 ];
 
-
-
-
 function Empty() {
   const [selectedCategory, setSelectedCategory] = useState('monthly'); //by default it should be all
-    
+
   const [data, setData] = useState(dataMonthly); //by default it should be all
-  const [status, setStatus] = useState({1:"This month",2:"Last month"});
-  const [stats, setStats] = useState("Last 6 months");  
+  const [status, setStatus] = useState({ 1: 'This month', 2: 'Last month' });
+  const [stats, setStats] = useState('Last 6 months');
 
   const [currentDate, setCurrentDate] = useState(new Date());
- 
-
-
 
   let dataOfDash = [
     {
@@ -195,24 +185,24 @@ function Empty() {
       case 'monthly':
         setCurrentDate(new Date()); // Set to current month
         setData(dataMonthly);
-        setStatus({1:"This month",2:"Last month"})
-        setStats("Last 6 months")
+        setStatus({ 1: 'This month', 2: 'Last month' });
+        setStats('Last 6 months');
         break;
       case 'weekly':
         setCurrentDate(addWeeks(new Date(), 0)); // Set to current week
-        setStatus({1:"This week",2:"Last week"})
-        setStats("Last 6 weeks")
+        setStatus({ 1: 'This week', 2: 'Last week' });
+        setStats('Last 6 weeks');
         setData(dataWeekly);
         break;
       case 'daily':
         setCurrentDate(new Date()); // Set to current date
         setData(dataDaily);
-        setStatus({1:"Today",2:"Yesterday"})
-        setStats("")
+        setStatus({ 1: 'Today', 2: 'Yesterday' });
+        setStats('');
         break;
       case 'alltime':
         // No need to update the date
-        setStatus({1:"All time",2:"All time"})
+        setStatus({ 1: 'All time', 2: 'All time' });
         break;
       default:
         break;
@@ -257,79 +247,63 @@ function Empty() {
       </div>
       <div className="mt-9 flex justify-between mb-5 items-center mx-9 ">
         <div className="w-2/12"></div>
-          <div className="" id="main">
-           
-            {selectedCategory !== 'alltime' && (
-              <div className='flex justify-center items-center gap-5' >
-                <div dir="rtl">
-                  <button
-                
-                    className="border-2 border-solid rounded-lg p-2 "
-                    onClick={handlePrevious}
-                  >
-                    <img src="assets/icons/chevron_left.svg" alt="Previous" />
-                  </button>
-                </div>
-
-                <h4 id="change">
-                  {
-                    selectedCategory === 'monthly'
-                      ? format(currentDate, 'MMMM yyyy')
-                      : selectedCategory === 'weekly'
-                      ? `Week ${format(currentDate, 'w')}, ${format(currentDate, 'yyyy')}`
-                      : selectedCategory === 'daily'
-                      ? format(currentDate, 'MMMM d, yyyy')
-                      : null /* Null to hide the date display when 'All time' is selected */
-                  }
-                </h4>
-
-                <div dir="ltr">
-                  <button
-                   
-                    className="border-2 border-solid rounded-lg p-2 "
-                    onClick={handleNext}
-                  >
-                    <img src="assets/icons/chevron_right.svg" alt="Next" />
-                  </button>
-                </div>
+        <div className="" id="main">
+          {selectedCategory !== 'alltime' && (
+            <div className="flex justify-center items-center gap-5">
+              <div dir="rtl">
+                <button className="border-2 border-solid rounded-lg p-2 " onClick={handlePrevious}>
+                  <img src="assets/icons/chevron_left.svg" alt="Previous" />
+                </button>
               </div>
-            )}
-          </div>
 
+              <h4 id="change">
+                {
+                  selectedCategory === 'monthly'
+                    ? format(currentDate, 'MMMM yyyy')
+                    : selectedCategory === 'weekly'
+                    ? `Week ${format(currentDate, 'w')}, ${format(currentDate, 'yyyy')}`
+                    : selectedCategory === 'daily'
+                    ? format(currentDate, 'MMMM d, yyyy')
+                    : null /* Null to hide the date display when 'All time' is selected */
+                }
+              </h4>
 
-          <ul className="flex justify-end ">
-            <li
-              className={`${
-                selectedCategory === 'monthly' ? 'active' : ''
-              } list-none rounded-lg p-2 cursor-pointer mx-2`}
-              onClick={() => handleCategoryChange('monthly')}
-            >
-              <a>Monthly</a>
-            </li>
-            <li
-              className={`${
-                selectedCategory === 'weekly' ? 'active' : ''
-              } list-none rounded-lg p-2 cursor-pointer mx-2`}
-              onClick={() => handleCategoryChange('weekly')}
-            >
-              <a>Weekly</a>
-            </li>
-            <li
-              className={`${selectedCategory === 'daily' ? 'active' : ''} list-none rounded-lg p-2 cursor-pointer mx-2`}
-              onClick={() => handleCategoryChange('daily')}
-            >
-              <a>Daily</a>
-            </li>
-            <li
-              className={`${
-                selectedCategory === 'alltime' ? 'active' : ''
-              } list-none rounded-lg p-2 cursor-pointer mx-2`}
-              onClick={() => handleCategoryChange('alltime')}
-            >
-              <a>All time</a>
-            </li>
-          </ul>
+              <div dir="ltr">
+                <button className="border-2 border-solid rounded-lg p-2 " onClick={handleNext}>
+                  <img src="assets/icons/chevron_right.svg" alt="Next" />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
+
+        <ul className="flex justify-end ">
+          <li
+            className={`${selectedCategory === 'monthly' ? 'active' : ''} list-none rounded-lg p-2 cursor-pointer mx-2`}
+            onClick={() => handleCategoryChange('monthly')}
+          >
+            <a>Monthly</a>
+          </li>
+          <li
+            className={`${selectedCategory === 'weekly' ? 'active' : ''} list-none rounded-lg p-2 cursor-pointer mx-2`}
+            onClick={() => handleCategoryChange('weekly')}
+          >
+            <a>Weekly</a>
+          </li>
+          <li
+            className={`${selectedCategory === 'daily' ? 'active' : ''} list-none rounded-lg p-2 cursor-pointer mx-2`}
+            onClick={() => handleCategoryChange('daily')}
+          >
+            <a>Daily</a>
+          </li>
+          <li
+            className={`${selectedCategory === 'alltime' ? 'active' : ''} list-none rounded-lg p-2 cursor-pointer mx-2`}
+            onClick={() => handleCategoryChange('alltime')}
+          >
+            <a>All time</a>
+          </li>
+        </ul>
+      </div>
       <div className="mt-3 ms-9 me-9 grid grid-cols-2 gap-4">
         <Box
           title="Employee contribution"
@@ -340,7 +314,6 @@ function Empty() {
           avg="contribution"
           h6="Receivers"
           stats={stats}
-    
           chart={
             <BarChart width={400} height={250} data={data}>
               <Bar dataKey="amount" fill="rgb(56 133 123 /1)" radius={[10, 10, 0, 0]} />
@@ -348,7 +321,7 @@ function Empty() {
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
                 cursor={{ fill: 'transparent' }}
               />
-               <XAxis dataKey="name" /> 
+              <XAxis dataKey="name" />
             </BarChart>
           }
         />
@@ -361,7 +334,7 @@ function Empty() {
           h6="Total no of savers"
           h4={status}
           chart={
-            <LineChart width={430} height={250} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
@@ -386,7 +359,7 @@ function Empty() {
           h6="Total no of transection"
           h4={status}
           chart={
-            <LineChart width={730} height={250} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
@@ -411,7 +384,7 @@ function Empty() {
           h6="Total no of transection"
           h4={status}
           chart={
-            <LineChart width={730} height={250} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
