@@ -31,7 +31,7 @@ import {
   Retail,
 } from '../../en.json';
 import { Formik, Form, FieldArray, Field, ErrorMessage } from 'formik';
-import { TextField, TextareaAutosize } from '@mui/material';
+import { TextField } from '@mui/material';
 const initialValues = {
   employees: [{ name: '', email: '', birthday: '', location: '' }],
 };
