@@ -85,4 +85,10 @@
 
 .login-textfeild .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   border: 0px !important;
+  border-width: 0px !important;
+}
+
+.login-textfeild .css-igs3ac {
+  border: 0px !important;
+  border-width: 0px !important;
 }
