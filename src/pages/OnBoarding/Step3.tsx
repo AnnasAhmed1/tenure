@@ -42,7 +42,7 @@ function Step3() {
               name="amount"
               value={formik.values.amount}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.amount && formik.errors.amount ? '1px solid red' : '' }}
               placeholder="enter an amount"
               className="mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"

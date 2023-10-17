@@ -14,7 +14,6 @@ export default function EnterEmail() {
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-
     },
   });
   return (
@@ -35,7 +34,7 @@ export default function EnterEmail() {
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               placeholder="Enter your email"
               className="mb-2 form-input px-4 py-3 w-96 border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
             />

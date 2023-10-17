@@ -10,7 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
 import { Input } from '@mui/joy';
 import * as yup from 'yup';
-import { useFormik } from 'formik';
+import { ErrorMessage, Field, useFormik } from 'formik';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -122,18 +122,31 @@ export default function CreateANewDeal({ headingText }: EditProps) {
             navigateToDeal();
           }}
         >
-          <div className="flex flex-col" style={{ width: '95%' }}>
+          <div className="flex flex-col relative" style={{ width: '95%' }}>
             <h3>Deal availability</h3>
             <p className="my-2" style={{ color: 'gray' }}>
               Select the date range and reach or your deal
             </p>
+            {/* <label className="block mb-5 text-left relative">
+              <Field
+                key="ind"
+                id="date"
+                name="date"
+                // value={formik.values.date}
+                // onChange={formik.handleChange}
+                // onBlur={formik.handleBlur}
+                type="date"
+                placeholder="Enter Employee birth date"
+                className="mb-1 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
+              />
+            </label> */}
             <Input
               sx={{ marginTop: 2 }}
               type="date"
               name="date"
               value={formik.values.date}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.date && formik.errors.date ? '1px solid red' : '' }}
               slotProps={{
                 input: {
@@ -142,9 +155,9 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 },
               }}
             />
-            {formik.touched.date && formik.errors.date ? (
+            {/* {formik.touched.date && formik.errors.date ? (
               <div className="text-start  mb-4 peer-invalid:visible text-danger-500 text-sm">{formik.errors.date}</div>
-            ) : null}
+            ) : null} */}
 
             <FormControl sx={{ marginTop: 2, marginLeft: 0, width: 'full' }}>
               <InputLabel id="demo-multiple-checkbox-label">Days available</InputLabel>
@@ -158,7 +171,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="days" // Match the field name in Formik
                 value={formik.values.days as string[]}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.days && formik.errors.days ? '1px solid red' : '' }}
               >
                 {names.map((name) => (
@@ -182,7 +195,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="reach"
                 value={formik.values.reach}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.reach && formik.errors.reach ? '1px solid red' : '' }}
                 renderValue={(selected) => selected as string}
               >
@@ -207,7 +220,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                   formik.handleChange(e);
                   handleTargetChange(e.target.value);
                 }}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.target && formik.errors.target ? '1px solid red' : '' }}
                 renderValue={(selected) => selected as string}
               >
@@ -233,7 +246,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="category"
                 value={formik.values.category}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.category && formik.errors.category ? '1px solid red' : '' }}
                 renderValue={(selected) => selected as string}
               >
@@ -263,7 +276,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="type"
                 value={formik.values.type}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.type && formik.errors.type ? '1px solid red' : '' }}
                 renderValue={(selected) => selected as string}
               >
@@ -284,7 +297,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                   name="url"
                   value={formik.values.url}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  // onBlur={formik.handleBlur}
                   style={{ border: formik.touched.url && formik.errors.url ? '1px solid red' : '' }}
                 ></TextField>
                 {formik.touched.url && formik.errors.url && (
@@ -304,7 +317,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="trigger"
                 value={formik.values.trigger}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.trigger && formik.errors.trigger ? '1px solid red' : '' }}
                 renderValue={(selected) => selected as string}
               >
@@ -329,7 +342,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="purchaseAmount"
                 value={formik.values.purchaseAmount}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.purchaseAmount && formik.errors.purchaseAmount ? '1px solid red' : '' }}
               ></TextField>
               {formik.touched.purchaseAmount && formik.errors.purchaseAmount ? (
@@ -345,7 +358,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                 name="limit"
                 value={formik.values.limit}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.limit && formik.errors.limit ? '1px solid red' : '' }}
               ></TextField>
               {formik.touched.limit && formik.errors.limit ? (
@@ -364,7 +377,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                     name="rewardType"
                     value={formik.values.rewardType}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     style={{ border: formik.touched.rewardType && formik.errors.rewardType ? '1px solid red' : '' }}
                   >
                     <MenuItem value="percentage">percentage (%)</MenuItem>
@@ -383,7 +396,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
                     name="rewardAmount"
                     value={formik.values.rewardAmount}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     style={{ border: formik.touched.rewardAmount && formik.errors.rewardAmount ? '1px solid red' : '' }}
                   ></TextField>
                   {formik.touched.rewardAmount && formik.errors.rewardAmount ? (
@@ -403,7 +416,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="title"
               value={formik.values.title}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.title && formik.errors.title ? '1px solid red' : '' }}
             ></TextField>
             {formik.touched.title && formik.errors.title ? (
@@ -419,7 +432,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="description"
               value={formik.values.description}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.description && formik.errors.description ? '1px solid red' : '' }}
             />
           </div>
@@ -469,7 +482,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="address"
               value={formik2.values.address}
               onChange={formik2.handleChange}
-              onBlur={formik2.handleBlur}
+              // onBlur={formik2.handleBlur}
               style={{ border: formik2.touched.address && formik2.errors.address ? '1px solid red' : '' }}
             />
             {formik2.touched.address && formik2.errors.address ? (
@@ -484,7 +497,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="city"
               value={formik2.values.city}
               onChange={formik2.handleChange}
-              onBlur={formik2.handleBlur}
+              // onBlur={formik2.handleBlur}
               style={{ border: formik2.touched.city && formik2.errors.city ? '1px solid red' : '' }}
             />
             {formik2.touched.city && formik2.errors.city ? (
@@ -497,7 +510,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="province"
               value={formik2.values.province}
               onChange={formik2.handleChange}
-              onBlur={formik2.handleBlur}
+              // onBlur={formik2.handleBlur}
               style={{ border: formik2.touched.province && formik2.errors.province ? '1px solid red' : '' }}
             />
             {formik2.touched.province && formik2.errors.province ? (
@@ -512,7 +525,7 @@ export default function CreateANewDeal({ headingText }: EditProps) {
               name="postalCode"
               value={formik2.values.postalCode}
               onChange={formik2.handleChange}
-              onBlur={formik2.handleBlur}
+              // onBlur={formik2.handleBlur}
               style={{ border: formik2.touched.postalCode && formik2.errors.postalCode ? '1px solid red' : '' }}
             />
             {formik2.touched.postalCode && formik2.errors.postalCode ? (

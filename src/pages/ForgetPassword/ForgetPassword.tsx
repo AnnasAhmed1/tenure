@@ -18,7 +18,7 @@ function ForgetPassword() {
   });
   return (
     <div className="bg-gray-50 grid grid-cols-1">
-      <div className='w-11/12 m-auto'>
+      <div className="w-11/12 m-auto">
         <Link to="/">
           <img src="assets/icons/arrow_left.svg" alt="" className="mt-5 text-primary-500" />
         </Link>
@@ -42,7 +42,7 @@ function ForgetPassword() {
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               placeholder="Enter your email"
               className="mb-2 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
               style={{ border: formik.touched.email && formik.errors.email ? '1px solid red' : '' }}

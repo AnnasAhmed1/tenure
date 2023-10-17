@@ -312,7 +312,7 @@ export default function EmTableRows(props: any) {
                       className="w-full rounded-md"
                       value={formik.values.recipientOptions}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                     >
                       <optgroup>
                         {recipientOptions.map((item) => (
@@ -329,7 +329,7 @@ export default function EmTableRows(props: any) {
                       className="w-full rounded-md"
                       value={formik.values.goalOptions}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                     >
                       <option value="">Select an option</option>
                       <optgroup>
@@ -351,7 +351,7 @@ export default function EmTableRows(props: any) {
                       name="amount"
                       value={formik.values.amount}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                       type="text"
                       className="w-full rounded-md mb-1"
                       placeholder="Enter an amount"
@@ -485,7 +485,7 @@ export default function EmTableRows(props: any) {
                       className="w-full rounded-md"
                       value={formik.values.recipientOptions}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                     >
                       <optgroup>
                         {recipientOptions.map((item) => (
@@ -502,7 +502,7 @@ export default function EmTableRows(props: any) {
                       className="w-full rounded-md"
                       value={formik.values.goalOptions}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                     >
                       <option value="">Select an option</option>
                       <optgroup>
@@ -524,7 +524,7 @@ export default function EmTableRows(props: any) {
                       name="amount"
                       value={formik.values.amount}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                       type="text"
                       className="w-full rounded-md mb-1"
                       placeholder="enter an amount"
@@ -735,7 +735,7 @@ export default function EmTableRows(props: any) {
                                     <select name="recipientOptions" id="recipientOptions" className='w-full rounded-md'
                                     value={formik.values.recipientOptions}
                                     onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}   
+                                    // onBlur={formik.handleBlur}   
                                     >
                                     <optgroup>
                                     {recipientOptions.map(item => 
@@ -747,7 +747,7 @@ export default function EmTableRows(props: any) {
                                     <select name="goalOptions" id="goalOptions" className='w-full rounded-md'
                                     value={formik.values.goalOptions}
                                     onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}   
+                                    // onBlur={formik.handleBlur}   
                                     >
                                     <option value="">Select an option</option>
                                     <optgroup>
@@ -766,7 +766,7 @@ export default function EmTableRows(props: any) {
                                     <input name="amount"
                                         value={formik.values.amount}
                                         onChange={formik.handleChange}
-                                        onBlur={formik.handleBlur} 
+                                        // onBlur={formik.handleBlur} 
                                         type="text" className='w-full rounded-md mb-1' placeholder='enter an amount' />
                                          {formik.touched.amount && formik.errors.amount ? (
                                         <div className="text-start  mb-4 peer-invalid:visible text-danger-500 text-sm">

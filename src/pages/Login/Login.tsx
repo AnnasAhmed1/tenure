@@ -61,7 +61,7 @@ export default function Login() {
             variant="outlined"
             value={formik.values.email}
             onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
+            // onBlur={formik.handleBlur}
             error={formik.touched.email && Boolean(formik.errors.email)}
             style={{
               marginBottom: '0.5rem',
@@ -87,7 +87,7 @@ export default function Login() {
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               label="Enter your password"
               variant="outlined"
               error={formik.touched.email && Boolean(formik.errors.email)}
@@ -129,7 +129,7 @@ export default function Login() {
                 name="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 placeholder="Enter your password"
                 className="mb-2 form-input appearance-none px-4 py-2 w-96 border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ..."
                 style={{ border: formik.touched.password && formik.errors.password ? '1px solid red' : '' }}

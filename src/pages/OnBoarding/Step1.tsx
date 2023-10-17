@@ -56,7 +56,7 @@ function Step1() {
               name="fullName"
               value={formik.values.fullName}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.fullName && formik.errors.fullName ? '1px solid red' : '' }}
               placeholder="Enter your full name"
               className="mb-2 placeholder:italic placeholder:text-slate-400 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -78,7 +78,7 @@ function Step1() {
               name="role"
               value={formik.values.role}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.role && formik.errors.role ? '1px solid red' : '' }}
               placeholder="Enter your role"
               className="mb-2 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -101,7 +101,7 @@ function Step1() {
               name="companyName"
               value={formik.values.companyName}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               style={{ border: formik.touched.companyName && formik.errors.companyName ? '1px solid red' : '' }}
               placeholder="Enter your company name"
               className="mb-2 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -125,7 +125,7 @@ function Step1() {
                 name="options"
                 value={formik.values.options}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 style={{ border: formik.touched.options && formik.errors.options ? '1px solid red' : '' }}
               >
                 <option value="">Select an option</option>

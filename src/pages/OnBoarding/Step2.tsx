@@ -47,6 +47,7 @@ function Step2() {
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
+              validateOnBlur={false}
               onSubmit={() => setComponent(true)}
             >
               {({ values }) => (

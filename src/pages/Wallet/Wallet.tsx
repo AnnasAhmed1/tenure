@@ -184,7 +184,7 @@ export default function Wallet() {
                         name="budget"
                         value={formik.values.budget}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
+                        // onBlur={formik.handleBlur}
                         style={{ border: formik.touched.budget && formik.errors.budget ? '1px solid red' : '' }}
                         type="text"
                         label="$ Current budget"

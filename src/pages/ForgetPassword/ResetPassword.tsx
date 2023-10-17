@@ -39,7 +39,7 @@ function ResetPassword() {
 
   return (
     <div className="bg-gray-50 grid grid-cols-1">
-      <div className='w-11/12 m-auto'>
+      <div className="w-11/12 m-auto">
         <Link to="/ForgetPassword">
           <img src="assets/icons/arrow_left.svg" alt="" className="mt-5 text-primary-500" />
         </Link>
@@ -63,7 +63,7 @@ function ResetPassword() {
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               // validate={validatePassword}
               placeholder="Create a password"
               className="mb-2 form-input appearance-none px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ..."

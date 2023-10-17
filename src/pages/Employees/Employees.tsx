@@ -570,7 +570,7 @@ export default function Employees() {
                     name="amount"
                     value={formik.values.amount}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     className="rounded-lg w-full mt-2 mb-2"
                     type="text"
                     placeholder="Enter an amount"
@@ -624,7 +624,7 @@ export default function Employees() {
                     name="amount"
                     value={formik.values.amount}
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     style={{ border: formik.touched.amount && formik.errors.amount ? '1px solid red' : '' }}
                   ></TextField> */}
                   <TextField
@@ -634,7 +634,7 @@ export default function Employees() {
                     name="Title"
                     value={formik2.values.Title}
                     onChange={formik2.handleChange}
-                    onBlur={formik2.handleBlur}
+                    // onBlur={formik2.handleBlur}
                     style={{
                       marginTop: '8px',
                       marginBottom: '8px',
@@ -655,7 +655,7 @@ export default function Employees() {
                     rows={5}
                     value={formik2.values.Details}
                     onChange={formik2.handleChange}
-                    onBlur={formik2.handleBlur}
+                    // onBlur={formik2.handleBlur}
                     style={{
                       marginTop: '8px',
                       marginBottom: '8px',
@@ -710,7 +710,12 @@ export default function Employees() {
                   {OR}
                 </div>
               </div>
-              <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={() => addEmCl()}>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                validateOnBlur={false}
+                onSubmit={() => addEmCl()}
+              >
                 {({ values }) => (
                   <Form className="w-full" method="Post">
                     <FieldArray
@@ -752,7 +757,7 @@ export default function Employees() {
                                         className="text-red-500"
                                       />
                                     </label>
-                                    <label className="block mb-5 text-left">
+                                    <label className="block mb-5 text-left relative">
                                       <Field
                                         key={`${index}-birthday`}
                                         id={`employees.${index}.birthday`}

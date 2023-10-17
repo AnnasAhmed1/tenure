@@ -52,7 +52,7 @@ function Step4() {
                   name="amount"
                   value={formik.values.amount}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  // onBlur={formik.handleBlur}
                   style={{ border: formik.touched.amount && formik.errors.amount ? '1px solid red' : '' }}
                   placeholder="Amount to top up"
                   className="mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -69,7 +69,7 @@ function Step4() {
                   name="holderName"
                   value={formik.values.holderName}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  // onBlur={formik.handleBlur}
                   style={{ border: formik.touched.holderName && formik.errors.holderName ? '1px solid red' : '' }}
                   placeholder="Card holder name"
                   className="mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -86,7 +86,7 @@ function Step4() {
                   name="cardNumber"
                   value={formik.values.cardNumber}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  // onBlur={formik.handleBlur}
                   style={{ border: formik.touched.cardNumber && formik.errors.cardNumber ? '1px solid red' : '' }}
                   placeholder="Card number"
                   className="mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -101,13 +101,13 @@ function Step4() {
               <div className="flex gap-4">
                 {/* <div > */}
                 <div className="w-1/2">
-                  <label className='relative'>
+                  <label className="relative">
                     <input
                       type="date"
                       name="ExpDate"
                       value={formik.values.ExpDate}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                       style={{ border: formik.touched.ExpDate && formik.errors.ExpDate ? '1px solid red' : '' }}
                       placeholder="Expiration Date"
                       // style={{marginRight:'20rem'}}
@@ -129,7 +129,7 @@ function Step4() {
                       name="CVV"
                       value={formik.values.CVV}
                       onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
+                      // onBlur={formik.handleBlur}
                       style={{ border: formik.touched.CVV && formik.errors.CVV ? '1px solid red' : '' }}
                       // style={{position:'absolute',right:'24.8%'}}
                       className=" mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"
@@ -149,7 +149,7 @@ function Step4() {
                   name="postalCode"
                   value={formik.values.postalCode}
                   onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  // onBlur={formik.handleBlur}
                   style={{ border: formik.touched.postalCode && formik.errors.postalCode ? '1px solid red' : '' }}
                   placeholder="Postal code"
                   className="mb-5 form-input px-4 py-3 w-full border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500"

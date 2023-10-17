@@ -25,7 +25,7 @@ export default function SignUp() {
   const [typePassword, setTypePassword] = useState('password');
 
   //const passwordPattern = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
-  let navigate = useNavigate()
+  let navigate = useNavigate();
   const togglePassword = () => {
     setTypePassword((prevType) => (prevType === 'password' ? 'text' : 'password'));
   };
@@ -47,7 +47,7 @@ export default function SignUp() {
     },
     validationSchema: validationSchema,
     onSubmit: (_values) => {
-      navigate('/onBoarding1')
+      navigate('/onBoarding1');
     },
   });
   console.log(formik.errors.password);
@@ -65,7 +65,7 @@ export default function SignUp() {
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
+              // onBlur={formik.handleBlur}
               placeholder="Enter your email"
               className={`input-selected mb-2 form-input px-4 py-3 w-96 border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ...  peer-invalid:border-danger-500 focus: border-danger-500`}
               style={{ border: formik.touched.email && formik.errors.email ? '1px solid red' : '' }}
@@ -85,7 +85,7 @@ export default function SignUp() {
                 name="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
+                // onBlur={formik.handleBlur}
                 // validate={validatePassword}
                 placeholder="Create a password"
                 className="mb-2 form-input appearance-none px-4 py-2 w-96 border-2 rounded-lg border-solid border-gray-300 focus:border-gray-400 ring-gray-400 visible peer ..."
@@ -152,7 +152,7 @@ export default function SignUp() {
       <div className="container min-w-full center relative flex flex-col justify-center items-center">
         <blockquote className="body-text-medium blockquote-form text-gray-500">
           Already have an account?
-          <Link to="/Login">
+          <Link to="/">
             <span className="relative font-semibold text-primary-500"> Login</span>
           </Link>
         </blockquote>
