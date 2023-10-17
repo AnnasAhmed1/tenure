@@ -90,7 +90,8 @@ export default function Login() {
               // onBlur={formik.handleBlur}
               label="Enter your password"
               variant="outlined"
-              error={formik.touched.email && Boolean(formik.errors.email)}
+              // color="secondary"
+              error={formik.touched.password && Boolean(formik.errors.password)}
               style={{
                 marginBottom: '0.5rem',
                 padding: '0px',
@@ -99,9 +100,9 @@ export default function Login() {
                 // border: formik.touched.password && formik.errors.password ? '1px solid red' : '',
               }}
               InputProps={{
-                className: `border-2 border-solid border-gray-300  focus:border-gray-400 ring-gray-400 ${
-                  formik.touched.password && formik.errors.password ? 'border-[red] border-[1px]' : ''
-                }`,
+                className: `
+                border-2 border-solid border-gray-300  focus:border-gray-400 ring-gray-400 
+                ${formik.touched.password && formik.errors.password ? 'border-[red] border-[1px]' : ''}`,
               }}
               className="mb-2 w-120 login-textfeild border-solid border-gray-300 focus:border-gray-400 ring-gray-400"
             />
