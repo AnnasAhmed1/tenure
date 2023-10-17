@@ -3,7 +3,7 @@
 <circle cx="16" cy="16" r="16" fill="url(#pattern1)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1582_20162" transform="translate(-0.388889) scale(0.000462963)"/>
+<!-- <use xlink:href="#image0_1582_20162" transform="translate(-0.388889) scale(0.000462963)"/> -->
 </pattern>
 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_1582_20162" transform="scale(0.00444444)"/>

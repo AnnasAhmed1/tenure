@@ -12,10 +12,10 @@ export default function CatDetails(_prop: any) {
         </div>
         <div className="flex mt-5">
           <div className="flex flex-col" style={{ color: '#25384D' }}>
-            <img src={`assets/icons/${_prop?.item?.img}`} alt="" />
+            <img src={`assets/icons/${_prop?.item?.img}`} alt="" className="w-14" />
             <h4 className="mt-4">Available</h4>
           </div>
-          <div className="ms-5">
+          <div className="ms-4">
             <h3 style={{ color: '#25384D' }}>{_prop?.item?.brand}</h3>
             <div className="flex mt-4">
               <img src="assets/icons/map_arrow.svg" className="mr-5" alt="" />
