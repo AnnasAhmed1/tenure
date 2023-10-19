@@ -49,37 +49,37 @@ const dataMonthly = [
 ];
 const dataWeekly = [
   {
-    name: 'Week 1',
+    name: 'W18',
     amount: 8000,
     totalSaver: 2400,
     avgSaving: 2400,
   },
   {
-    name: 'Week 2',
+    name: 'W19',
     amount: 3000,
     totalSaver: 1398,
     avgSaving: 2210,
   },
   {
-    name: 'Week 3',
+    name: 'W20',
     amount: 2000,
     totalSaver: 9800,
     avgSaving: 2290,
   },
   {
-    name: 'Week 4',
+    name: 'W21',
     amount: 2780,
     totalSaver: 3908,
     avgSaving: 2000,
   },
   {
-    name: 'Week 5',
+    name: 'W22',
     amount: 1890,
     totalSaver: 4800,
     avgSaving: 2181,
   },
   {
-    name: 'Week 6',
+    name: 'W23',
     amount: 2390,
     totalSaver: 3800,
     avgSaving: 2500,
@@ -315,7 +315,7 @@ function Empty() {
           h6="Receivers"
           stats={stats}
           chart={
-            <BarChart width={400} height={250} data={data}>
+            <BarChart width={400} height={200} data={data}>
               <Bar dataKey="amount" fill="rgb(56 133 123 /1)" radius={[10, 10, 0, 0]} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
@@ -334,8 +334,8 @@ function Empty() {
           h6="Total no of savers"
           h4={status}
           chart={
-            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
-              <XAxis dataKey="name" axisLine={false} tickLine={false} />
+            <LineChart width={430} height={200} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
+              <XAxis dataKey="name" axisLine={true} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
                 cursor={false}
@@ -359,7 +359,7 @@ function Empty() {
           h6="Total no of transection"
           h4={status}
           chart={
-            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={430} height={200} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}
@@ -384,7 +384,7 @@ function Empty() {
           h6="Total no of transection"
           h4={status}
           chart={
-            <LineChart width={430} height={250} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
+            <LineChart width={430} height={200} data={data} margin={{ top: 15, right: 30, left: 20, bottom: 5 }}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} />
               <Tooltip
                 content={<ChartHoverBox active={undefined} payload={undefined} label={undefined} />}

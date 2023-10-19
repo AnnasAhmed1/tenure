@@ -24,7 +24,7 @@ function ForgetPassword() {
         </Link>
       </div>
       <div className="container min-w-full center pt-18 relative flex flex-col justify-center items-center">
-        <img className="w-72" src="images/lock.png" alt="" />
+        <img className="w-72" src="assets/images/lock.png" alt="" />
         <h2 className="mt-5 mb-3">Forgot password?</h2>
         <p
           style={{

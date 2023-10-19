@@ -226,7 +226,7 @@ export default function Wallet() {
                 <h1 className="text-5xl">$3,000</h1>
               </div>
             </div>
-            <div className="flex justify-center pt-40">
+            <div className="flex justify-center pt-36">
               <button
                 onClick={() => navigate('/TopUp')}
                 className="flex rounded-lg p-2"
@@ -254,8 +254,8 @@ export default function Wallet() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-5">
-            <div className="flex justify-between border mx-3 rounded-lg p-2 my-3">
+          <div className="flex flex-col mt-2">
+            <div className="flex justify-between border mx-3 rounded-lg p-2 my-[4px]">
               <div className="flex">
                 <img src="assets/icons/mastercard.svg" className="mr-4 w-8" alt="" />
                 <div className="flex flex-col">
@@ -318,7 +318,7 @@ export default function Wallet() {
                 </StyledModal>
               </div>
             </div>
-            <div className="flex justify-between border mx-3 rounded-lg p-2 my-3">
+            <div className="flex justify-between border mx-3 rounded-lg p-2 my-[4px]">
               <div className="flex">
                 <img src="assets/icons/visa.svg" className="mr-4 w-8" alt="" />
                 <div className="flex flex-col">
@@ -346,7 +346,7 @@ export default function Wallet() {
                 </Tippy>
               </div>
             </div>
-            <div className="flex justify-between border mx-3 rounded-lg p-2 my-3">
+            <div className="flex justify-between border mx-3 rounded-lg p-2 my-[4px]">
               <div className="flex">
                 <img src="assets/icons/mastercard.svg" className="mr-4 w-8" alt="" />
                 <div className="flex flex-col">
