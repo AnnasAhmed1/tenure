@@ -153,7 +153,7 @@ export default function EmTableHeads(props: any) {
             {shouldShowWalletHeads && (
                 <>
                     <thead>
-                        <tr className='bg-white-600 shadow-lg my-4'>
+                        <tr className='bg-white-600 shadow-lg/ my-4'>
                             <th className='text-start w-1/5 p-4' style={{ color: '#25384D' }}>Date & Time</th>
                             <th className='text-start w-1/5' style={{ color: '#25384D' }}>Amount</th>
                             <th className='  text-start w-1/5' style={{ color: '#25384D' }}>Payment channel</th>

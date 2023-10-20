@@ -821,7 +821,7 @@ export default function EmTableRows(props: any) {
       {/* Wallet */}
       {shouldShowWalletRows && (
         <tbody className="gap-x-7 gap-y-7">
-          <tr className="bg-white-600 shadow-lg  my-4">
+          <tr className="bg-white-600 border-b  my-4">
             <td className="p-4 w-1/3">
               <h5 className="text-start pt-1">{props.date}</h5>
             </td>

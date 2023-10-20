@@ -199,12 +199,12 @@ export default function Settings() {
             {editInfoFormShown && (
               <form className="flex mt-12 justify-between w-5/6" onSubmit={formik.handleSubmit}>
                 <div className="flex flex-col w-full text-start" style={{ color: '#25384D' }}>
-                  <h4 className="mb-4">Full name</h4>
+                  <h4 className="ml-1">Full name</h4>
 
                   <TextField
                     className="rounded-[17px]"
-                    label="Enter Name"
-                    sx={{ marginY: 2 }}
+                    label="Enter Full Name"
+                    sx={{ marginBottom: 3, marginTop: 1 }}
                     name="name"
                     value={formik.values.name}
                     onChange={formik.handleChange}
@@ -216,12 +216,12 @@ export default function Settings() {
                       {formik.errors.name}
                     </div>
                   ) : null}
-                  <h4 className="mb-4">Email</h4>
+                  <h4 className="ml-1">Email</h4>
 
                   <TextField
                     className="rounded-[17px]"
-                    label="Enter Name"
-                    sx={{ marginY: 2 }}
+                    label="Enter Email"
+                    sx={{ marginBottom: 3, marginTop: 1 }}
                     name="email"
                     value={formik.values.email}
                     onChange={formik.handleChange}
@@ -234,12 +234,12 @@ export default function Settings() {
                     </div>
                   ) : null}
 
-                  <h4 className="mb-4">Role</h4>
+                  <h4 className="ml-1">Role</h4>
 
                   <TextField
                     className="rounded-[17px]"
-                    label="Enter Name"
-                    sx={{ marginY: 2 }}
+                    label="Enter Role"
+                    sx={{ marginBottom: 3, marginTop: 1 }}
                     name="role"
                     value={formik.values.role}
                     onChange={formik.handleChange}
@@ -252,12 +252,12 @@ export default function Settings() {
                     </div>
                   ) : null}
 
-                  <h4 className="mb-4">Company Name</h4>
+                  <h4 className="ml-1">Company Name</h4>
 
                   <TextField
                     className="rounded-[17px]"
-                    label="Enter Name"
-                    sx={{ marginY: 2 }}
+                    label="Enter Conpany Name"
+                    sx={{ marginBottom: 3, marginTop: 1 }}
                     name="companyName"
                     value={formik.values.companyName}
                     onChange={formik.handleChange}
@@ -270,7 +270,7 @@ export default function Settings() {
                     </div>
                   ) : null}
 
-                  <h4 className="mb-4">Company Size</h4>
+                  <h4 className="ml-1">Company Size</h4>
                   <Box sx={{ width: 1 }}>
                     <FormControl fullWidth>
                       <InputLabel id="demo-simple-select-label">Company Size</InputLabel>

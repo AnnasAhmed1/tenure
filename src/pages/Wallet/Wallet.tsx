@@ -151,9 +151,9 @@ export default function Wallet() {
       <div className="flex items-center justify-between text-start ms-4 mt-5">
         <h1>Wallet</h1>
       </div>
-      <div className="flex">
+      <div className="flex gap-6">
         <div
-          className="mt-5 mx-5  w-1/2 relative border rounded-lg border-solid p-4"
+          className="mt-5 ml-5  w-1/2 relative border rounded-lg border-solid p-4"
           style={{ color: 'rgb(28, 92, 95)' }}
         >
           <div className="rounded-lg p-4">
@@ -216,7 +216,7 @@ export default function Wallet() {
                 </StyledModal>
               </div>
             </div>
-            <div className="flex justify-between mt-7">
+            <div className="flex gap-24 mt-7">
               <div className="flex flex-col text-start">
                 <h1 className="text-base my-1">Available balance</h1>
                 <h1 className="text-5xl">$3,000</h1>
@@ -239,7 +239,7 @@ export default function Wallet() {
           </div>
         </div>
         <div
-          className="mt-5 mx-5  w-1/2 relative border rounded-lg border-solid p-4"
+          className="mt-5 mr-5  w-1/2 relative border rounded-lg border-solid p-4"
           style={{ color: 'rgb(28, 92, 95)' }}
         >
           <div className="rounded-lg p-4">
@@ -267,7 +267,7 @@ export default function Wallet() {
                 <Tippy content={<span>Edit this card</span>} placement="bottom" animation="scale">
                   <a
                     onClick={navigateToEditCard}
-                    className="rounded me-3 button cursor-pointer px-3 py-3"
+                    className="rounded-lg me-3 button cursor-pointer px-3 py-3"
                     style={{ backgroundColor: 'rgba(28, 92, 95, 1)' }}
                   >
                     <img src="assets/icons/edit.svg" style={{ filter: 'brightness(900%)' }} alt="" />
@@ -277,7 +277,7 @@ export default function Wallet() {
                   <a
                     onClick={handleOpenR}
                     style={{ border: '1px solid rgb(210, 66, 82)' }}
-                    className="cross px-3 py-3 rounded hover:bg-red-100 cursor-pointer"
+                    className="cross px-3 py-3 rounded-lg hover:bg-red-100 cursor-pointer"
                   >
                     <img src="assets/icons/close.svg" alt="" />
                   </a>
